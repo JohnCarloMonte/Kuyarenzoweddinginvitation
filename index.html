@@ -8,149 +8,262 @@
 <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
     <title>Wedding Invitation</title>
     <style>
-        body, html {
-            font-family: Arial, sans-serif;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-
-        }
-
-        .front-photo {
-            background: url('frontphoto.jpg') no-repeat;
-            background-size: cover;
-            width: 100%;
-            height: 1500px;
-            background-position: top center;
-            background-color: #8A9A5B;
-            margin: 0;
-            padding: 0;
-        }
-
-        .date-timer-section {
-            color: #333;
-            text-align: center;
-            padding: 20px 0;
+        html{
             width: 100%;
         }
+ body, html {
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
 
-        .date-text {
-            font-weight: bold;
-            color: #333;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-            margin-top: 1200px;
-        }
+.front-photo {
+    background: url('frontphoto.jpg') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 1500px;
+    background-position: top center;
+    background-color: #8A9A5B;
+    margin: 0;
+    padding: 0;
+}
 
-        .date-text .day {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
+.date-timer-section {
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
 
-        .date-text .date-main {
-            font-size: 1.8em;
-            margin: 10px 0;
-            text-decoration: underline overline;
-            text-decoration-thickness: 2px;
-            text-decoration-color: #8A9A5B;
-        }
+.date-text {
+    font-weight: bold;
+    color: #333;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 1200px;
+}
 
-        .date-text .year {
-            font-size: 1.5em;
-            letter-spacing: 3px;
-            margin-top: 10px;
-        }
+.date-text .day {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
 
-        .timer {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 20px;
-            margin-left: 20px;
-            margin-right: 20px;
-        }
+.date-text .date-main {
+    font-size: 1.8em;
+    margin: 10px 0;
+    text-decoration: underline overline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #8A9A5B;
+}
 
-        .timer-box {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 5px;
-            width: 80px;
-            text-align: center;
-            position: relative;
-        }
+.date-text .year {
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
 
-        .timer-box span {
-            display: block;
-            font-size: 1.5em;
-            color: #fff;
-        }
+.timer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
-        .label {
-            
-            font-size: 0.8em;
-            color: #8A9A5B;
-            margin-top: 5px;
-        }
+.timer-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    width: 80px;
+    text-align: center;
+    position: relative;
+}
 
-        .colon {
-            font-size: 2em;
-            color: #333;
-            line-height: 1.2;
-            margin: 0 5px;
-        }
+.timer-box span {
+    display: block;
+    font-size: 1.5em;
+    color: #fff;
+}
 
-        .welcome-section {
-            background-color: #8A9A5B;
-            color: #F5DEB3;
-            padding: 40px;
-            text-align: center;
-            width: 100%;
-        }
+.label {
+    font-size: 0.8em;
+    color: #8A9A5B;
+    margin-top: 5px;
+}
 
-        .welcome-section p {
-            margin: 10px 0;
-            line-height: 1.6;
-            margin-left: 10px;
-            margin-right: 10px;
-        }
+.colon {
+    font-size: 2em;
+    color: #333;
+    line-height: 1.2;
+    margin: 0 5px;
+}
 
-        /* Slideshow container */
-        .slideshow {
-            width: 100%;
-            height: 400px;
-            position: relative;
-            overflow: hidden;
-            margin-top: 20px;
-        }
+.welcome-section {
+    background-color: #8A9A5B;
+    color: #F5DEB3;
+    padding: 5vw 2rem;  /* Adjust padding using viewport width (vw) and rem units */
+    display: block;
+    text-align: center;
+    width: 100%;
+    align-items: center; /* Vertically center the content */
+    box-sizing: border-box; /* Ensures padding is included in width/height */
+}
 
-        /* Animation for rotating images */
-        @keyframes slideShow {
-            0% { background-image: url('slideshow7.jpg'); }
-            20% { background-image: url('slideshow2.jpg'); }
-            40% { background-image: url('slideshow3.jpg'); }
-            60% { background-image: url('slideshow4.jpg'); }
-            80% { background-image: url('slideshow5.jpg'); }
-            100% { background-image: url('slideshow6.jpg'); }
-        }
+.welcome-section h2 {
+    font-size: 5vw; 
+    letter-spacing: 0.10em;
+    margin: 0;
+    font-family: Alegreya, 'Alegreya Fallback';
+}
 
-        .slideshow {
-            animation: slideShow 15s infinite;
-            background-size: cover;
-            background-position: center;
-            height:900px;
-            padding: 0;
-            margin: 0;
-        }
-        .family-section {
+.welcome-section p {
+    font-size: 2rem; /* Use rem for text size scaling */
+    line-height: 1.5;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+    .date-text {
+        margin-top: 780px; /* Adjust margin for better alignment on mobile */
+    }
+
+    .date-text .day {
+        font-size: 1.3em; /* Slightly smaller font size */
+    }
+
+    .date-text .date-main {
+        font-size: 1.5em; /* Slightly smaller font size */
+    }
+
+    .date-text .year {
+        font-size: 1.3em; /* Slightly smaller font size */
+    }
+
+    .timer-box {
+        width: 70px; /* Smaller width for mobile */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .timer-box span {
+        font-size: 1.2em; /* Reduce font size */
+    }
+
+    .label {
+        font-size: 0.7em; /* Reduce label font size */
+    }
+
+    .colon {
+        font-size: 1.5em; /* Reduce colon font size */
+    }
+
+    .welcome-section {
+        padding-left: 200px;
+        padding-right: 200px; /* Reduce padding on smaller screens */
+    }
+}
+
+/* Very Small Devices (e.g., Phones in Portrait Mode) */
+@media (max-width: 480px) {
+    .front-photo {
+        height: 1000px;
+    }
+
+    .date-text {
+        margin-top: 800px; /* Adjust margin further for small screens */
+    }
+
+    .date-text .day {
+        font-size: 1em; /* Even smaller font size */
+    }
+
+    .date-text .date-main {
+        font-size: 1em; /* Even smaller font size */
+    }
+
+    .date-text .year {
+        font-size: 1em; /* Even smaller font size */
+    }
+
+
+
+    .timer-box {
+        width: 30px; /* Even smaller width */
+        padding: 10px; /* Smaller padding */
+    }
+
+    .timer-box span {
+        font-size: 1em; /* Smaller font size */
+    }
+
+    .label {
+        font-size: 0.6em; /* Smaller font size */
+    }
+
+    .colon {
+        font-size: 1.2em; /* Smaller colon font size */
+    }
+
+    .welcome-section {
+        padding-left: 300px;
+        padding-right: 300px; /* Reduce padding on smaller screens */
+    }
+}
+/* General Styles */
+.welcome-section h1 {
+ 
+    font-size: x-small;
+}
+.welcome-section p {
+    margin: 10px 0;
+    line-height: 1.5;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: x-small;
+}
+
+/* Slideshow container */
+.slideshow {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* Animation for rotating images */
+@keyframes slideShow {
+    0% { background-image: url('slideshow7.jpg'); }
+    20% { background-image: url('slideshow2.jpg'); }
+    40% { background-image: url('slideshow3.jpg'); }
+    60% { background-image: url('slideshow4.jpg'); }
+    80% { background-image: url('slideshow5.jpg'); }
+    100% { background-image: url('slideshow6.jpg'); }
+}
+
+/* Slideshow animation */
+.slideshow {
+    animation: slideShow 15s infinite;
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Family section */
+.family-section {
     background-color: #8A9A5B;
     color: #fefdfa;
     padding: 40px;
     text-align: center;
-
     font-family: Alegreya, 'Alegreya Fallback';
 }
 
@@ -163,6 +276,7 @@
     font-style: italic;
 }
 
+/* Family boxes layout */
 .family-boxes {
     display: flex;
     justify-content: center;
@@ -194,81 +308,205 @@
 .box ul li {
     margin: 5px 0;
 }
-        .flower-girls-box {
-            margin-top: 30px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 250px;
-            background-color: rgba(255, 255, 255, 0.1);
+
+/* Flower girls box */
+.flower-girls-box {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 8px;
     width: 300px;
     box-sizing: border-box;
-        }
-        .section {
-            width: 100%;
-            text-align: center;
-            padding: 40px;
-        }
+}
 
-        /* Dress Code Section */
-        .dress-code-section h1 {
-            font-style: Allura, 'Allura Fallback';
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
+    
 
-        .dress-code-section h3 {
-            font-size: 1.5em;
-            color: #555;
-            margin-bottom: 20px;
-        }
 
-        .dress-code-section img {
-            width: 300px;
-            height: 400px;
-            margin: 10px;
-            border-radius: 5px;
-        }
+/* Section styling */
+.section {
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+}
 
-        /* Guest Message Section */
-        .guest-message {
-            background: url('colors.png') no-repeat center center/cover;
-            color: #FFFFFF;
-            padding: 80px 20px;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            position: relative;
-        }
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Adjust family boxes layout to a single column */
+    .family-boxes {
+        flex-direction: column; /* Stack boxes in one column */
+        align-items: center; /* Center align the column items */
+    }
 
-        .guest-message h1 {
-            font-family: Allura, 'Allura Fallback';
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-        }
+    /* Family Section */
+    .family-section h1,
+    .family-section .section-title {
+        font-size: 1.5em; /* Adjusted font size for smaller screens */
+    }
 
-        .guest-message p {
-            font-size: 1.1em;
-            max-width: 600px;
-            margin: 0 auto 20px;
-            line-height: 1.6;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-        }
+    /* Family Boxes */
+    .box {
+        width: 250px; /* Adjust width for smaller screens */
+    }
 
-        .guest-message .small-text {
-            font-size: 0.9em;
-            max-width: 600px;
-            margin: 10px auto 0;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-        }
-        /* Gift Guide Section */
-        .gift-guide {
+    .flower-girls-box {
+        width: 250px; /* Adjust size for smaller screens */
+    }
 
+    /* Adjust font sizes */
+    .box h2 {
+        font-size: 1.1em;
+    }
+
+    .box ul li {
+        font-size: 0.8em;
+    }
+
+    /* Section padding */
+    .section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .family-section h1,
+    .family-section .section-title {
+        font-size: 1.2em;
+    }
+
+    .box {
+        width: 200px;
+    }
+
+    .flower-girls-box {
+        width: 220px;
+        font-size: 0.7em;
+    }
+
+
+    .box h2 {
+        font-size: 1em;
+        letter-spacing: 0.1em;
+        font-family: 'Allura', cursive, sans-serif;
+    }
+    .fg {
+        font-family: 'Allura', cursive, sans-serif;
+        font-size: 1.5em;
+
+    }
+
+    .box ul li {
+        font-size: 0.7em;
+    }
+
+    .section {
+        padding: 10px;
+    }
+}
+
+/* Dress Code Section */
+.dress-code-section h1 {
+    font-family: Allura, 'Allura Fallback';
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.dress-code-section h3 {
+    font-family: Allura, 'Allura Fallback';
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.dress-code-section img {
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 5px;
+    max-width: 20%;
+    max-height: 20%;
+    padding: 10px;
+}
+
+/* Guest Message Section */
+.guest-message {
+    background: url('colors.png') no-repeat center center/cover;
+    color: #FFFFFF;
+    padding: 60px 15px; /* Adjusted padding for a better fit on all screens */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.guest-message h1 {
+    font-family: Allura, 'Allura Fallback';
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.guest-message p {
+    font-size: 1.1em;
+    max-width: 90%; /* Changed from px to percentage for responsive width */
+    margin: 0 auto 15px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.guest-message .small-text {
+    font-size: 0.9em;
+    max-width: 90%; /* Changed from px to percentage for flexibility */
+    margin: 10px auto 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .guest-message {
+        padding: 40px 15px; /* Reduced padding for medium screens */
+    }
+
+    .guest-message h1 {
+        font-size: 1.6em; /* Slightly smaller font size */
+    }
+
+    .guest-message p {
+        font-size: 1em; /* Smaller font size */
+        max-width: 85%; /* Responsive width for smaller screens */
+    }
+
+    .guest-message .small-text {
+        font-size: 0.85em; /* Slightly smaller font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .guest-message {
+        padding: 30px 10px; /* Further reduced padding for very small screens */
+    }
+
+    .guest-message h1 {
+        font-size: 1.4em; /* Further reduced font size */
+    }
+
+    .guest-message p {
+        font-size: 0.9em; /* Adjusted font size for readability */
+        max-width: 40%; /* Max width to fit smaller screens */
+    }
+
+    .guest-message .small-text {
+        font-size: 0.75em;
+        max-width: 40%; /* Smaller font for compact text */
+    }
+}
+
+/* Gift Guide Section */
+.gift-guide {
     padding: 40px;
     border-radius: 10px;
-
     max-width: 600px;
     margin: 20px auto;
     text-align: center;
@@ -314,6 +552,21 @@
     margin-top: 5px;
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .gift-guide {
+        max-width: 50%; /* 50% max-width for small screens */
+        padding: 30px;  /* Adjusted padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gift-guide {
+        max-width: 40%; /* 40% max-width for smaller screens */
+        padding: 20px;  /* Reduced padding for smaller screens */
+    }
+}
+
 /* Venue Section Styling */
 .venue h1 {
     font-style: italic;
@@ -323,14 +576,24 @@
     color: white;
     font-family: 'Allura', cursive, sans-serif;
 }
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .venue h1 {
+    font-size: 3em;
+}
+}
 
+@media (max-width: 480px) {
+    .venue h1 {
+    font-size: 3em;
+}
+}
 /* Venue Container for Inline Boxes */
 .venue-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    
 }
 
 /* Venue Boxes */
@@ -338,8 +601,8 @@
     width: 40%;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-left:20px;
-    margin-right:20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .venue-box:hover {
@@ -362,14 +625,12 @@
 
 .venue-text {
     text-align: center;
-
     padding: 20px;
     border-radius: 5px;
 }
 
 .venue-text h2 {
     margin: 0;
-    
     font-size: 1.5em;
 }
 
@@ -381,7 +642,6 @@
 .view-map-btn {
     margin-top: 10px;
     padding: 8px 16px;
-
     border: none;
     border-radius: 5px;
     font-weight: bold;
@@ -391,17 +651,50 @@
 .view-map-btn:hover {
     background-color: #f0f0f0;
 }
-/* Responsive Design for Mobile View */
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .venue-container {
-        flex-direction: column; /* Stack boxes vertically */
-        gap: 15px; /* Space between stacked boxes */
+    /* Adjusting venue box size for small screens */
+    .venue-box {
+        width: 45%; /* Increase width to fit 2 boxes per row */
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
-    .venue-box {
-        width: 100%; /* Full width on mobile */
+    .venue-text h2 {
+        font-size: 1.3em; /* Adjust font size */
     }
+
+    .venue-text p {
+        font-size: 0.9em; /* Adjust font size */
+    }
+    .view-map-btn:hover {
+    background-color: #f0f0f0;
 }
+}
+
+
+@media (max-width: 480px) {
+    /* Adjusting venue box size for smaller screens */
+    .venue-box {
+        width: 90%; /* Take up almost full width on smaller screens */
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .venue-text h2 {
+        font-size: 1.2em; /* Further reduce font size */
+    }
+
+    .venue-text p {
+        font-size: 0.85em; /* Further reduce font size */
+    }
+    .view-map-btn:hover {
+    background-color: #f0f0f0;
+}
+}
+
+
 .order-of-events-section {
     display: flex;
     justify-content: center;
@@ -447,11 +740,11 @@
             padding: 0;
             margin: 0;
 }
+/* Answers Section */
 .answers-section {
     text-align: center;
-
     color: #FFF5E1; /* Cream text */
-    background-color:#8A9A5B;
+    background-color: #8A9A5B;
     padding: 20px;
 }
 
@@ -467,14 +760,13 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    background-color:#8A9A5B;
+    background-color: #8A9A5B;
     align-items: flex-start;
-    
 }
 
 .answer-box {
     border: 5px solid #9CAF88;
-    background-color:#8A9A5B;
+    background-color: #8A9A5B;
     padding: 15px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -485,7 +777,7 @@
 }
 
 .answer-box:hover {
-    background-color:#7c8a52;
+    background-color: #7c8a52;
 }
 
 .answer-box .icon {
@@ -507,11 +799,47 @@
     font-size: 14px;
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
+    /* Answers Container: Single column layout */
+    .answers-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    /* Adjusting Answer Box size */
     .answer-box {
-        width: 100%;
+        width: 80%; /* Adjust width to fit the screen */
+        max-width: 500px; /* Set a max width */
+        margin-bottom: 20px; /* Add space between boxes */
+    }
+
+    /* Heading adjustment */
+    .answers-section h1 {
+        font-size: 30px; /* Smaller heading for smaller screens */
     }
 }
+
+@media (max-width: 480px) {
+    /* Answers Container: Single column layout */
+    .answers-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    /* Adjusting Answer Box size */
+    .answer-box {
+        width: 90%; /* Further reduce width for smaller screens */
+        max-width: 400px; /* Set a smaller max width */
+        margin-bottom: 15px; /* Add space between boxes */
+    }
+
+    /* Heading adjustment */
+    .answers-section h1 {
+        font-size: 25px; /* Further reduce heading size */
+    }
+}
+
 .prenup-section {
     text-align: center;
     background-color: #8A9A5B;
@@ -716,6 +1044,7 @@
     object-fit: cover;
     border-radius: 0 10px 10px 0;
 }
+
 /* Responsive styles for mobile screens */
 @media (max-width: 768px) {
     .rsvp-section {
@@ -723,12 +1052,13 @@
         align-items: center;
     }
 
-    .rsvp-left, .rsvp-right {
+    .rsvp-right {
         max-width: 100%;
         padding: 15px;
     }
 
     .rsvp-left {
+        max-width: 40%;
         border-radius: 0 0 10px 10px;
     }
 
@@ -986,7 +1316,7 @@
         </div>
     
         <div class="family-box flower-girls-box">
-            <h2>Flower Girls</h2>
+            <h2 class="fg">Flower Girls</h2>
             <p>Jenive Dar</p>
             <p>Xyrine Allyson Pontillas</p>
             <p>Klein Chelsea Abraham</p>
