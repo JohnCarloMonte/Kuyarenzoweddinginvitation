@@ -407,27 +407,57 @@
 }
 
 /* Dress Code Section */
-.dress-code-section h1 {
+.dress-code-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.dress-code-section h1,
+.dress-code-section h3 {
     font-family: Allura, 'Allura Fallback';
+    margin: 0;
+}
+
+.dress-code-section h1 {
     font-size: 3em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .dress-code-section h3 {
-    font-family: Allura, 'Allura Fallback';
     font-size: 1.5em;
     color: #555;
     margin-bottom: 20px;
 }
 
-.dress-code-section img {
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 300px;
-    height: 400px;
+    max-width: 70%;
     margin: 10px;
+}
+
+.image-text {
+    font-size: 1.5em;
+    font-family: Allura, 'Allura Fallback';
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
     border-radius: 5px;
-    max-width: 20%;
-    max-height: 20%;
-    padding: 10px;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+    .dress-code-section {
+        flex-direction: column;
+    }
 }
 
 /* Guest Message Section */
@@ -475,11 +505,12 @@
 
     .guest-message p {
         font-size: 1em; /* Smaller font size */
-        max-width: 85%; /* Responsive width for smaller screens */
+        max-width: 40%; /* Responsive width for smaller screens */
     }
 
     .guest-message .small-text {
-        font-size: 0.85em; /* Slightly smaller font size */
+        font-size: 0.85em;
+        max-width: 40%; /* Slightly smaller font size */
     }
 }
 
@@ -494,7 +525,7 @@
 
     .guest-message p {
         font-size: 0.9em; /* Adjusted font size for readability */
-        max-width: 40%; /* Max width to fit smaller screens */
+        max-width: 30%; /* Max width to fit smaller screens */
     }
 
     .guest-message .small-text {
@@ -659,6 +690,7 @@
         width: 45%; /* Increase width to fit 2 boxes per row */
         margin-left: 10px;
         margin-right: 10px;
+        
     }
 
     .venue-text h2 {
@@ -677,9 +709,10 @@
 @media (max-width: 480px) {
     /* Adjusting venue box size for smaller screens */
     .venue-box {
-        width: 90%; /* Take up almost full width on smaller screens */
+        width: 50%; /* Take up almost full width on smaller screens */
         margin-left: 5px;
         margin-right: 5px;
+ 
     }
 
     .venue-text h2 {
@@ -879,11 +912,11 @@
 }
 
 .album.move-left .album-images {
-    animation: scroll-left 10s linear infinite;
+    animation: scroll-left 30s linear infinite;
 }
 
 .album.move-right .album-images {
-    animation: scroll-right 10s linear infinite;
+    animation: scroll-right 30s linear infinite;
 }
 
 .album img {
@@ -891,7 +924,7 @@
     height: 400px;
     flex-shrink: 0;
     cursor: pointer;
-    border-radius: 2%;
+    border-radius: 1%;
 }
 
 /* Keyframes for left and right scrolls */
@@ -1131,7 +1164,22 @@
   width: 2px;
   height: 2px;
 }
+#music-toggle {
+        background-color: #8A9A5B; /* Match the prenup section's background color */
+        color: #FFF5E1; /* Cream color text */
+        padding: 10px 20px;
+        font-size: 1.5em;
+        font-family: 'Allura', sans-serif;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-bottom: 10px;
+        border: 2px #FFF5E1 solid;
+    }
 
+    #music-toggle:hover {
+        background-color: #9CAF88; /* Slightly lighter green on hover */
+    }
 
     </style>
 </head>
@@ -1168,7 +1216,7 @@
     </div>
     <div class="welcome-section">
         <h2>WELCOME TO OUR WEDDING WEBSITE</h2>
-        <p>We warmly invite you to join us as we renew our vows and celebrate the journey of love we've shared. Your presence would mean the world to us on this special day.</p>
+        <p>We warmly invite you to join us  on our Wedding Day Celebration, Your presence would mean the world to us on this special day.</p>
         <p>Click around to find everything you need to know about our wedding, including details on the wedding venue, dress code, travel information, and much more.</p>
         <p>Don’t forget to RSVP!</p>
         <p>Please use our hashtag to help us document our special day! #siBABYLIYNpaRENZOhuli #RENZOlectedbyGODforBABYLIYN</p>
@@ -1188,21 +1236,19 @@
     
         <div class="family-boxes">
             <div class="box">
-                <h2>Groom's Family</h2>
+                <h2>Parents of the Groom</h2>
                 <ul>
-                    <li>ANTONIO HERMINIO ABRAHAM</li>
-                    <li>AVELIN PONTILLAS ABRAHAM</li>
-                    <li>ALLYSON PONTILLAS</li>
-                    <li>AVELIN PONTILLAS ABRAHAM</li>
+                    <li>MR. ANTONIO HERMINIO A. ABRAHAM † </li>
+                    <li>MRS. AVELIN PONTILLAS ABRAHAM</li>
+
                 </ul>
             </div>
             <div class="box">
-                <h2>Bride's Family</h2>
+                <h2>Parents of the Bride</h2>
                 <ul>
-                    <li>MELITO ODEN NAPIL</li>
-                    <li>VIVIAN MACASINAG DAR</li>
-                    <li>MARVIN NAPILI</li>
-                    <li>VIVIAN MACASINAG DAR</li>
+                    <li>MR. MELITO ODEN NAPILI</li>
+                    <li>MRS. VIVIAN MACASINAG DAR</li>
+
                 </ul>
             </div>
         </div>
@@ -1230,7 +1276,7 @@
                     <li>Mrs. Christine De Leon</li>
                     <li>Mrs. Farah Pontillas</li>
                     <li>Mrs. Cherry Mayores</li>
-                    <li>Mrs. Becky Manlangit</li>
+                    <li>Mrs. Rebecca Manlangit</li>
                     <li>Mrs. Myrna Villagen</li>
                     <li>Mrs. Marla Relloso</li>
                     <li>Mrs. Rhodora Reonal</li>
@@ -1249,7 +1295,7 @@
                 <ul><li>Christian Jan Dacuma</li></ul>
             </div>
             <div class="box">
-                <h2>Maids of Honor</h2>
+                <h2>Maid of Honor</h2>
                 <ul><li>Audrey Kate Pontillas</li></ul>
             </div>
         </div>
@@ -1269,7 +1315,7 @@
                 <h2>Bridesmaids</h2>
                 <ul>
                     <li>Ms. Catherine Borjal</li>
-                    <li>Ms. Joy Padilla Agot</li>
+                    <li>Ms. Joy Ann Rachel Padilla Agot</li>
                     <li>Ms. Kyla Cogsinado</li>
                     <li>Ms. Cristina Rasco</li>
                 </ul>
@@ -1323,14 +1369,20 @@
             <p>Alchea Lien Boneo</p>
         </div>
     </div>
-    </div> <!-- Dress Code Section -->
     <div class="section dress-code-section">
         <h1>The dress code</h1>
-        <h3>Formal/Semi-Formal attire</h3>
-        <img src="formal.png" alt="Formal Attire">
-        <img src="semiformal.jpg" alt="Semi-Formal Attire">
+    
+        <div class="image-container">
+            <div class="image-text">Principal Sponsors</div>
+            <img src="creamsuit.jpg" alt="Formal Attire">
+        </div>
+    
+        <div class="image-container">
+            <div class="image-text">Guest</div>
+            <img src="sage-green.jpg" alt="Semi-Formal Attire">
+        </div>
     </div>
-
+    
     <!-- Guest Message Section -->
     <div class="section guest-message">
         <h1>Guests</h1>
@@ -1359,10 +1411,10 @@
             
             <p>BPI</p>
             <span>Account No.: 0826346062</span>
-            <span>Account Name: Babylin M. Napili</span>
+            <span>Account Name: Babyliyn M. Napili</span>
             
             <h3>GCash</h3>
-            <span>09510056236 (Babylin M. Napili)</span>
+            <span>09510056236 (Babyliyn M. Napili)</span>
             <span>09636563005 (Renzo P. Abraham)</span>
         </div>
         
@@ -1483,7 +1535,6 @@
                 <ul>
                     <li>Forgets to turn their cell phone off during the ceremony</li>
                     <li>Takes centerpieces home without permission</li>
-                    <li>Enjoys the open bar a little too much</li>
                     <li>Becomes that guest everyone talks about after the wedding</li>
                 </ul>
             </div>
@@ -1518,6 +1569,8 @@
         <div class="particle"></div>
 <div class="prenup-section">
     <h2>Prenup Photos</h2>
+    <audio id="background-music" src="song.mp3" autoplay loop></audio>
+    <button id="music-toggle" onclick="toggleMusic()">Play Music</button>
     <div class="album-container">
         <!-- Album Moving Left -->
         <div class="album move-left">
@@ -1690,6 +1743,20 @@ form.addEventListener('submit', e => {
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
+
+    const music = document.getElementById("background-music");
+    const musicToggle = document.getElementById("music-toggle");
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            musicToggle.textContent = "Pause Music";
+        } else {
+            music.pause();
+            musicToggle.textContent = "Play Music";
+        }
+    }
+
 
 
     </script>
